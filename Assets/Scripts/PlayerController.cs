@@ -17,14 +17,14 @@ public class PlayerController : MonoBehaviour
     {
         MoveAction.Enable();
         rigidbody2d = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
+        // currentHealth = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
         move = MoveAction.ReadValue<Vector2>();
-        Debug.Log(move);
+        //Debug.Log("Object that entered the trigger: " + other);
     }
 
     void FixedUpdate()
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         rigidbody2d.MovePosition(position);
     }
 
-    void ChangeHealth (int amount)
+    public void ChangeHealth (int amount = 1)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
