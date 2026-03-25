@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7443441837186196384}
   - component: {fileID: 3476224601192359468}
   - component: {fileID: 7187830735948777607}
-  - component: {fileID: 780969690572944419}
   m_Layer: 0
   m_Name: DamageZone_0
   m_TagString: Untagged
@@ -131,15 +130,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3745103, y: 2.3850875}
   m_EdgeRadius: 0
---- !u!114 &780969690572944419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646835904603429747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f51686c6c0cbbc74eb676a43829d914e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
