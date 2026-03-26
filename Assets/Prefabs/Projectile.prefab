@@ -171,3 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f384f2a5eb9b2e4289bd12443141f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHitClip: {fileID: 8300000, guid: 4ecf2abcdd2987b4ab2773ac82a0f2de, type: 3}

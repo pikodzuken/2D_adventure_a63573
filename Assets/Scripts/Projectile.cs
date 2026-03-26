@@ -1,25 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
+    AudioSource audioSource;
+    public AudioClip enemyHitClip;
     // Start is called before the first frame update
     void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
-   {
+    {
         if(transform.position.magnitude > 100.0f)
         {
-        Destroy(gameObject);
+            Destroy(gameObject);
         }
-   }
-
+    }
     // Update is called once per frame
     public void Launch(Vector2 direction, float force)
     {
@@ -28,14 +30,15 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-    EnemyController enemy = other.GetComponent<EnemyController>();
+        EnemyController enemy = other.GetComponent<EnemyController>();
+        if (enemy != null)
+        {
+            enemy.HitByProjectile();
+            Destroy(gameObject);
+            return;
+        }
 
-    if (enemy != null)
-    {
-        enemy.Fix();
-    }
-
-    Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D other)
