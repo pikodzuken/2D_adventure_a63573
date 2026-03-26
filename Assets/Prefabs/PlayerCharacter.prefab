@@ -149,6 +149,40 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
+  LaunchAction:
+    m_Name: Launch
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: eaa1f2ce-9ada-4261-9c56-84cbc212d5a9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 1fbb3eac-63cb-4163-a1ac-17166c68f5f1
+      m_Path: <Keyboard>/c
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Launch
+      m_Flags: 0
+    m_Flags: 0
+  talkAction:
+    m_Name: Talk
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 00fa3693-f7bc-454d-9cfe-212d7d1e5817
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c6cc693f-599b-40eb-9612-efa7863414cf
+      m_Path: <Keyboard>/x
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Talk
+      m_Flags: 0
+    m_Flags: 0
   maxHealth: 5
   speed: 3
   timeInvincible: 2
