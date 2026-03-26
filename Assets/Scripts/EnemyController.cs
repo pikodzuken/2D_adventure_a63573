@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     AudioSource audioSource;
     public AudioClip enemyHitClip;
     bool broken = true;
+    public ParticleSystem smokeEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,5 +81,6 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("Fixed");
         // Don't stop audio here so hit sound can play
         // if you have looping enemy movement sound, manage it via separate logic when fixed
+        smokeEffect.Stop();
     }
 }
